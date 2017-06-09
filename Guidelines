@@ -1,0 +1,76 @@
+Udacity Android Developer Nanodegree - Core App Quality Guidelines
+http://udacity.github.io/android-nanodegree-guidelines/core.html
+
+#Visual Design and User Interaction
+
+@Standard Design
+App does not redefine the expected function of a system icon (such as the Back button).
+App does not redefine or misuse Android UI patterns, such that icons or behaviors could be misleading or confusing to users.
+
+@Navigation
+App supports standard system Back button navigation and does not make use of any custom, on-screen "Back button" prompts.
+All dialogs are dismissible using the Back button.
+Pressing the Home button at any point navigates to the Home screen of the device.
+
+#Functionality
+
+@Permissions
+App does not redefine or misuse Android UI patterns, such that icons or behaviors could be misleading or confusing to users.
+App does not request permissions to access sensitive data or services that can cost the user money, unless related to a core capability of the app.
+
+@User/App State
+App correctly preserves and restores user or app state, that is , student uses a bundle to save app state and restores it via onSaveInstanceState/onRestoreInstanceState. For example,
+When a list item is selected, it remains selected on rotation.
+When an activity is displayed, the same activity appears on rotation.
+User text input is preserved on rotation.
+Maintains list items positions on device rotation.
+When the app is resumed after the device wakes from sleep (locked) state, the app returns the user to the exact state in which it was last used.
+When the app is relaunched from Home or All Apps, the app restores the app state as closely as possible to the previous state.
+
+#Performance and Stability
+
+@Stability
+App does not crash, force close, freeze, or otherwise function abnormally on any targeted device.
+
+
+
+
+User Interface - Layout
+
+MEETS SPECIFICATIONS
+1. UI contains an element (e.g., a spinner or settings menu) to toggle the sort order of the movies by: most popular, highest rated.
+2. Movies are displayed in the main layout via a grid of their corresponding movie poster thumbnails.
+3. UI contains a screen for displaying the details for a selected movie.
+4. Movie Details layout contains title, release date, movie poster, vote average, and plot synopsis.
+5. Movie Details layout contains a section for displaying trailer videos and user reviews.
+
+User Interface - Function
+
+MEETS SPECIFICATIONS
+1. When a user changes the sort criteria (most popular, highest rated, and favorites) the main view gets updated correctly.
+2. When a movie poster thumbnail is selected, the movie details screen is launched.
+3. When a trailer is selected, app uses an Intent to launch the trailer.
+4. In the movies detail screen, a user can tap a button(for example, a star) to mark it as a Favorite.
+
+Network API Implementation
+
+MEETS SPECIFICATIONS
+1. In a background thread, app queries the /movie/popular or /movie/top_rated API for the sort criteria specified in the settings menu.
+2. App requests for related videos for a selected movie via the /movie/{id}/videos endpoint in a background thread and displays those details when the user selects a movie.
+3. App requests for user reviews for a selected movie via the /movie/{id}/reviews endpoint in a background thread and displays those details when the user selects a movie.
+
+Data Persistence
+
+MEETS SPECIFICATIONS
+1. The titles and ids of the user's favorite movies are stored in a ContentProvider backed by a SQLite db. This ContentProvider is updated whenever the user favorites or unfavorites a movie.
+2. When the "favorites" setting option is selected, the main view displays the entire favorites collection based on movie ids stored in the ContentProvider.
+
+Suggestions to Make Your Project Stand Out!
+1. Extend the favorites ContentProvider to store the movie poster, synopsis, user rating, and release date, and display them even when offline.
+2. Implement sharing functionality to allow the user to share the first trailer’s YouTube URL from the movie details screen.
+
+
+
+Some usefull tutorial
+Android Architecture Components
+https://medium.com/proandroiddev/android-architecture-components-cb1ea88d3835

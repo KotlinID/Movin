@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp">
+
+    <ImageView
+        android:layout_marginLeft="8dp"
+        android:layout_gravity="center_vertical"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="48dp"
+        android:layout_height="48dp" />
+    <LinearLayout
+        android:id="@+id/container"
+        android:focusable="true"
+        android:clickable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginLeft="52dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="16dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Title"
+            android:textSize="16sp"
+            android:textColor="#444"
+            tools:text="Ardiansyah Putra" />
+
+        <TextView
+            android:id="@+id/site_and_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+            tools:text="Lorem ipsum dolor sitamit" />
+    </LinearLayout>
+</android.support.v7.widget.CardView>

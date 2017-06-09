@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Movin</string>
+    <string name="movin_logo_description">Movin Image Logo</string>
+    <string name="star_icon_description">Star icon</string>
+    <string name="data_loading_popcorn">Preparing some Popcorns…</string>
+</resources>
